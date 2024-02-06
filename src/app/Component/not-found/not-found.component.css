@@ -1,0 +1,21 @@
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0%; 
+    overflow: hidden;
+}
+button{
+    background-color:#7fffd4;
+    font-size: 20px;
+    color: black;
+    border-radius: 5px;
+    border-color: #7fffd4;
+    cursor: pointer;
+}
+button:hover{
+    color: black;
+    background-color: #66cdaa;
+}

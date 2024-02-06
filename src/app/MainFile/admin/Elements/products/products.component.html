@@ -1,0 +1,21 @@
+
+<div  class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card col-md-2">
+
+                <img class="preview-image" mat-card-image 
+                src="https://bookcart.azurewebsites.net/Upload/{{item.coverFileName}}">
+
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+                {{item.title}}</h5>
+
+                <p>₹{{item.price}}</p>
+
+                <button class="btn btn-primary" (click)="showSuccess()" (click)=addtocart(item) > 
+                <fa-icon [icon]="carticon"></fa-icon> Add to Cart</button>
+                
+            </div>
+        </ng-container>
+    </div>
+</div>

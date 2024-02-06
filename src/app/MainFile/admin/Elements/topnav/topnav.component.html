@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<div class="topnav">
+  
+  <a  href="/admin/home"><fa-icon [icon]="book"></fa-icon> Book Cart</a>
+
+  <div class="leftnavitems">
+  
+    <a routerLink="/admin/cart" > 
+      <fa-icon style="font-size: 15px;" [icon]="cart"></fa-icon>
+      <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+    </a>
+    
+    <a (click)="logout()">Logout</a>
+
+  </div>
+
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search Books or Authors" name="search">
+    </form>
+  </div>
+
+</div>
+
+</body>
+</html>
+

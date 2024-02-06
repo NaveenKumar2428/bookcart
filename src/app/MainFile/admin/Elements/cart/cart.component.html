@@ -1,0 +1,61 @@
+
+<ng-container *ngIf="products.length !=0">  
+
+   <div class="container">
+
+    <div class="card-table">
+        <div class="card-product">
+            <table class="table table-responsive">
+                <thead style="background-color: orange;">
+                    <tr>
+                        <th style="font-size: 25px;">Card Items</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th><button (click)="emptycart()" class="btn btn-primary">Clear cart</button></th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>MRP</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of products; let i=index">
+                        <td> <img style="width: 150px;height: 150px;" mat-card-image src="https://bookcart.azurewebsites.net/Upload/{{item.coverFileName}}"></td>
+                        <td>{{item.title}}</td>
+                        <td>₹{{item.price}}</td>
+                        <td><fa-icon [icon]="minus"></fa-icon> {{item.quantity}} <fa-icon [icon]="plus"></fa-icon></td>
+                        <td>{{item.total}}</td>
+                        <td><button (click)="removeItem(item)" class="btn btn-danger"><fa-icon [icon]="delete"></fa-icon></button></td>
+                    </tr>
+                      
+                       <td colspan="3"></td>   <!--colspan will leave the starting 3 colums  -->
+                       <td>Cart Total:</td>
+                       <td>₹{{grandTotal}}</td>
+                       <td><button style="color:black; background-color:lightseagreen"  routerLink="/admin/home" class="btn btn-success">Check out</button></td>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+   </div>
+  
+
+</ng-container>
+
+<ng-container *ngIf="products.length ==0">
+
+    <div class="empty">
+        <h2>Shopping cart is empty</h2><br>
+        <button routerLink="/admin/home" class="btn btn-info">continue Shopping</button>
+    </div>
+
+</ng-container>

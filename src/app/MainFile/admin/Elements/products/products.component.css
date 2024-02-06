@@ -1,0 +1,36 @@
+
+.container{
+    width: 75%;
+    margin-top: -600px;
+    margin-left: 380px;   
+}
+
+.card{
+    padding: 15px;
+    margin: 10px;
+}
+
+.card img{
+    width: 150px;
+    height: 200px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.card img:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 992px) {
+
+    .container{
+    display: inline;
+    overflow: hidden;
+    }
+    .btn-primary{
+      width: 150px;
+    }
+
+
+}

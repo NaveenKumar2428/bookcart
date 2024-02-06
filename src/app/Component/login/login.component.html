@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<div class="login-form">
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <h1>Login</h1>
+    <div class="content">
+      <div class="input-field">  
+
+        <input type="username" placeholder="Username" formControlName="name" [(ngModel)]="name"> 
+
+      </div>
+
+      <div class="input-field">
+
+        <input type="password" placeholder="Password" formControlName="password" [(ngModel)]="password">
+
+      </div>
+
+      <a>Forgot Your Password?</a>
+
+    </div>
+
+    <div class="action">
+
+      <button>Register</button>
+      <button>Login</button>
+
+    </div>
+    
+  </form>
+
+</div>
+
+
+
+</body>
+</html>
